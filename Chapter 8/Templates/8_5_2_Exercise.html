@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang=en>
-    <head>
-        <meta charset=utf-8 />
-        <title>Form validation: text field not empty </title>
-    </head>
-    <body>
-        <form onSubmit="return checkForLastName();"> 
-            Please enter your last name.<br>
-            <input type="text" id="lastNameField"> 
-            <input type="submit" value="Submit Form">
-        </form>
-        <script>
+
+<head>
+    <meta charset=utf-8 />
+    <title>Form validation: text field not empty </title>
+</head>
+
+<body>
+    <form onSubmit="return checkForLastName();">
+        Please enter your last name.<br>
+        <input type="text" id="lastNameField">
+        <input type="submit" value="Submit Form">
+    </form>
+    <script>
         function checkForLastName() {
-            let targetField=document.getElementById("lastNameField");
+            let targetField = document.getElementById("lastNameField");
             if (document.getElementById("lastNameField").value.length === 0) {
-            alert("Please enter your last name"); 
-            return false;
+                alert("Please enter your last name");
+                return false;
             }
         }
-        </script>
-    </body>
-</html>
+    </script>
+</body>
 
+</html>

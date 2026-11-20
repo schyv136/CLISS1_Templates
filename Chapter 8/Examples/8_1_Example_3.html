@@ -1,31 +1,34 @@
 <!DOCTYPE html>
 <html lang=en>
-    <head>
-        <meta charset=utf-8 />
-        <title>Form validation: ZIP codes </title>
-    </head>
-    <body>
-        <form onSubmit="return validateZIP();"> 
-            Please enter your ZIP code.<br>
-            <input type="text" id="ZIP"> 
-            <input type="submit" value="Submit Form">
-        </form>
-        <script>
+
+<head>
+    <meta charset=utf-8 />
+    <title>Form validation: ZIP codes </title>
+</head>
+
+<body>
+    <form onSubmit="return validateZIP();">
+        Please enter your ZIP code.<br>
+        <input type="text" id="ZIP">
+        <input type="submit" value="Submit Form">
+    </form>
+    <script>
         function validateZIP() {
-            var valueEntered = document.getElementById("ZIP").value;
-            var numChars=valueEntered.length;
-            if (numChars<4) {
-            alert("Please enter a 4-digit code."); 
-            return false;
+            let valueEntered = document.getElementById("ZIP").value;
+            let numChars = valueEntered.length;
+            if (numChars < 4) {
+                alert("Please enter a 4-digit code.");
+                return false;
             }
-            for (var i=0;i <=4; i++){
-                var thisChar=parseInt(valueEntered[i]);
-                if(isNaN(thisChar)){
+            for (var i = 0; i <= 4; i++) {
+                let thisChar = parseInt(valueEntered[i]);
+                if (isNaN(thisChar)) {
                     alert("Please enter only numbers.");
                     return false;
                 }
             }
         }
-        </script>
-    </body>
+    </script>
+</body>
+
 </html>

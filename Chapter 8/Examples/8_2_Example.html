@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang=en>
-    <head>
-        <meta charset=utf-8 />
-        <title>Form validation: ZIP codes </title>
-    </head>
-    <body>
-        <form onSubmit="return validateZIP();"> 
-            Please enter your ZIP code.<br>
-            <input type="text" id="ZIP"> 
-            <input type="submit" value="Submit Form">
-        </form>
-        <script>
+
+<head>
+    <meta charset=utf-8 />
+    <title>Form validation: ZIP codes </title>
+</head>
+
+<body>
+    <form onSubmit="return validateZIP();">
+        Please enter your ZIP code.<br>
+        <input type="text" id="ZIP">
+        <input type="submit" value="Submit Form">
+    </form>
+    <script>
         function validateZIP() {
-            var numChars=document.getElementById("ZIP").value.length;
-            if (numChars<4) {
-            alert("Please enter a 4-digit code."); 
-            return false;
+            var numChars = document.getElementById("ZIP").value.length;
+            if (numChars < 4) {
+                alert("Please enter a 4-digit code.");
+                return false;
             }
         }
-        </script>
-    </body>
+    </script>
+</body>
+
 </html>
