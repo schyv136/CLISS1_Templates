@@ -1,21 +1,35 @@
 <!DOCTYPE html>
-</html lang=en>
+<html lang="en">
 <head>
-    <title>Exercise 4.3.2 Solution</title>
     <meta charset="UTF-8">
+    <title>Exercise 4.3.2</title>
 </head>
 <body>
-    <h2>Calculator</h2>
-    <p id="calcText" ;></p>
-    <img id="imageShape" width="200" height="200">
+
+    <h2 id="title">Welcome</h2>
+
+    <p>Enter your name:</p>
+
+    <input type="text" id="nameField">
+
+    <button onclick="changeTitle()">Update Title</button>
+
     <script>
-        let shape = prompt("What is the shape you want to calculate the perimeter?")
-        if (shape == "rectangle") {
-            //write here your code for the rectangle
+
+        function changeTitle() {
+
+            // TODO 1:
+            // Read the value from the text field
+            // and store it in a variable called name
+
+
+            // TODO 2:
+            // Change the text of the h2 to:
+            // "Hello " + name
+
         }
-        else if (shape == "circle") {
-            //write here your code for the circle
-        }
+
     </script>
+
 </body>
 </html>
